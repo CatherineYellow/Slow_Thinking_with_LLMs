@@ -30,9 +30,9 @@ random.seed(42)
 # AIME25: "STILL-3-TOOL/evaluation/dataset/AIME25.jsonl"
 # hmmt_feb_2025: "STILL-3-TOOL/evaluation/dataset/hmmt_feb_2025.jsonl"
 name2path = {
-    "AIME24": "STILL-3-TOOL/evaluation/dataset/AIME24.jsonl",
-    "AIME25": "STILL-3-TOOL/evaluation/dataset/AIME25.jsonl",
-    "hmmt_feb_2025": "STILL-3-TOOL/evaluation/dataset/hmmt_feb_2025.jsonl",
+    "AIME24": "dataset/AIME24.jsonl",
+    "AIME25": "dataset/AIME25.jsonl",
+    "hmmt_feb_2025": "dataset/hmmt_feb_2025.jsonl",
 }
 
 name2eval = {
