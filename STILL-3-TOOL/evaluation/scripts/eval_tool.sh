@@ -13,12 +13,12 @@ SCRIPT=${PWD}/run_eval_tool.py
 # required: model_path_list and prompt_template_path :)
 # prompt_template_path: "STILL-3-TOOL/config/prompt_template.json"
 model_path_list=(\
-    # "" \
+    "RUC-AIBOX/STILL-3-TOOL-32B" \
     # "" \
     # "" \
     # "" \
 )
-prompt_template_path=
+prompt_template_path="STILL-3-TOOL/config/prompt_template.json"
 
 num_model=${#model_path_list[@]}
 
