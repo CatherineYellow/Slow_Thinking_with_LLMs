@@ -52,17 +52,18 @@ def main(args, lines, start_id, use_slice=False):
         )
 
     import torch
-    from transformers import AutoTokenizer
+    from transformers import AutoTokenizer, AutoModelForCausalLM
     from vllm import LLM, SamplingParams
 
     tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path)
-    model = LLM(
-        model=args.model_name_or_path,
-        trust_remote_code=True,
-        dtype="bfloat16",
-        tensor_parallel_size=args.paralle_size,
-        swap_space=16,
-    )
+    # model = LLM(
+    #     model=args.model_name_or_path,
+    #     trust_remote_code=True,
+    #     dtype="bfloat16",
+    #     tensor_parallel_size=args.paralle_size,
+    #     swap_space=16,
+    # )
+    model = AutoModelForCausalLM.from_pretrained("RUC-AIBOX/STILL-3-TOOL-32B")
     stop_words = [
         # "<|im_end|>",
         # "<|endoftext|>",
